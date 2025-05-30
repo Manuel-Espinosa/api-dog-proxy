@@ -10,7 +10,7 @@ This project implements a backend proxy in Flask that exposes a structured and R
 ├── requirements.txt
 ├── Dockerfile
 ├── docker-compose.yml
-├── .env (optional)
+├── .env
 └── src/
     ├── proxy/
     │   └── dog_api_proxy.py
@@ -28,8 +28,8 @@ This project implements a backend proxy in Flask that exposes a structured and R
 
 1. Clone the repository:
    ```bash
-   git clone <repo-url>
-   cd <repo>
+   git clone https://github.com/Manuel-Espinosa/api-dog-proxy
+   cd api-dog-proxy
    ```
 
 2. **Create Docker network (once):**
@@ -37,12 +37,14 @@ This project implements a backend proxy in Flask that exposes a structured and R
    docker network create dog-api-network
    ```
 
-3. Start the service:
+3. Create your .env file 
+
+4. Start the service:
    ```bash
    docker compose up --build
    ```
 
-4. Access the backend at:
+5. Access the backend at:
    [http://localhost:5000](http://localhost:5000)
 
 ## Available Endpoints
