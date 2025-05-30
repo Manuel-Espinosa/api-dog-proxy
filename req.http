@@ -1,0 +1,22 @@
+@baseUrl = http://localhost:5000
+
+### Get all breeds
+GET {{baseUrl}}/breeds
+
+### Get specific breed
+GET {{baseUrl}}/breeds/036feed0-da8a-42c9-ab9a-57449b530b13
+
+### Get dog facts
+GET {{baseUrl}}/facts
+
+### Get all groups
+GET {{baseUrl}}/groups
+
+### Get specific group
+GET {{baseUrl}}/groups/8000793f-a1ae-4ec4-8d55-ef83f1f644e5
+
+### Get group details
+GET {{baseUrl}}/group-details/8000793f-a1ae-4ec4-8d55-ef83f1f644e5
+
+### Get breed from group
+GET {{baseUrl}}/group-details/8000793f-a1ae-4ec4-8d55-ef83f1f644e5/breed/68f47c5a-5115-47cd-9849-e45d3c378f12

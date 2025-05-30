@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  dog-api-proxy:
+    container_name: ${DOCKER_NAME}
+    build: .
+    ports:
+      - "${DOCKER_PORT}:5000"
+    volumes:
+      - .:/app 
+    environment:
+      - DOG_API_BASE_URL=https://dogapi.dog/api/v2
+    networks:
+      - ${DOCKER_NETWORK}
+
+networks:
+  dog-api-network:
+    external:
+      name: ${DOCKER_NETWORK}
+
+
