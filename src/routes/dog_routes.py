@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, request
 from src.usecases.dog_usecase import DogUseCase
 
 dog_blueprint = Blueprint('dog_routes', __name__)
@@ -6,7 +6,8 @@ usecase = DogUseCase()
 
 @dog_blueprint.route('/breeds', methods=['GET'])
 def get_breeds():
-    return jsonify(usecase.get_breeds())
+    page = request.args.get("page", default=1, type=int)
+    return jsonify(usecase.get_breeds(page))
 
 @dog_blueprint.route('/breeds/<breed_id>', methods=['GET'])
 def get_breed(breed_id):

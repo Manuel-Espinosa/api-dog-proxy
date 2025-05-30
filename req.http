@@ -1,7 +1,7 @@
 @baseUrl = http://localhost:5000
 
 ### Get all breeds
-GET {{baseUrl}}/breeds
+GET {{baseUrl}}/breeds?page=2
 
 ### Get specific breed
 GET {{baseUrl}}/breeds/036feed0-da8a-42c9-ab9a-57449b530b13
