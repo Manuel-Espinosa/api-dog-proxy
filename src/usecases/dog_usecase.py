@@ -6,7 +6,10 @@ class DogUseCase:
 
     def get_breeds(self, page=1):
         return self.proxy.fetch(f"/breeds?page[number]={page}&page[size]=10")
-
+    
+    def get_breed(self, breed_id):
+        return self.proxy.fetch(f"/breeds/{breed_id}")
+    
     def get_facts(self):
         return self.proxy.fetch("/facts")
 

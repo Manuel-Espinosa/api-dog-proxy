@@ -62,7 +62,7 @@ This project implements a backend proxy in Flask that exposes a structured and R
 You can test the RESTful endpoints using the provided `test_endpoints.py` script. Before running it, make sure the backend is up and running:
 
 ```bash
-docker-compose exec dog-api-proxy python test/test_endpoints.py
+docker compose exec dog-api-proxy python test/test_endpoints.py
 ```
 
 Replace `<breed_id>` and `<group_id>` in the script URLs with real values if needed.
